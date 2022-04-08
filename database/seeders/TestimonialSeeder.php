@@ -18,8 +18,32 @@ class TestimonialSeeder extends Seeder
         DB::table('testimonials')->insert([
             'avis' => '“just think about TemplateMo if you need free CSS templates for your website”',
             'nom' => 'Catherine Walk',
-            'position' => '',
+            'position' => 'CEO & Founder',
         ]);
-        //
+        DB::table('testimonials')->insert([
+            'avis' => '“just think about TemplateMo if you need free CSS templates for your website”',
+            'nom' => 'George Soft',
+            'position' => 'CEO & Founder',
+        ]);
+        DB::table('testimonials')->insert([
+            'avis' => '“just think about TemplateMo if you need free CSS templates for your website”',
+            'nom' => 'John Doe',
+            'position' => 'CEO & Founder',
+        ]);
+        DB::table('testimonials')->insert([
+            'avis' => '“just think about TemplateMo if you need free CSS templates for your website”',
+            'nom' => 'David Martin',
+            'position' => 'CEO & Founder',
+        ]);
+        DB::table('testimonials')->insert([
+            'avis' => '“just think about TemplateMo if you need free CSS templates for your website”',
+            'nom' => 'Andrew Hall',
+            'position' => 'CEO & Founder',
+        ]);
+        DB::table('testimonials')->insert([
+            'avis' => '“just think about TemplateMo if you need free CSS templates for your website”',
+            'nom' => 'Maxy Power',
+            'position' => 'CEO & Founder',
+        ]);
     }
 }

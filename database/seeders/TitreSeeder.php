@@ -20,6 +20,20 @@ class TitreSeeder extends Seeder
             'soustitre' => 'Welcome To Our School',
             'description' => '',
         ]);
-
+        DB::table('titres')->insert([
+            'titre' => 'Provided (Services)',
+            'soustitre' => 'OUR SERVICES',
+            'description' => '',
+        ]);
+        DB::table('titres')->insert([
+            'titre' => 'What You Can (Learn)',
+            'soustitre' => 'OUR COURSES',
+            'description' => 'You just think about TemplateMo whenever you need free CSS templates for your business website',
+        ]);
+        DB::table('titres')->insert([
+            'titre' => 'What They (Think)',
+            'soustitre' => 'TESTIMONIALS',
+            'description' => '',
+        ]);
     }
 }

@@ -17,12 +17,12 @@ class ContactSeeder extends Seeder
     {
         DB::table('contacts')->insert([
             'map' => '',
-            'contact1' => '',
-            'value-contact1' => '',
-            'icone1' => '',
-            'contact2' => '',
-            'value-contact2' => '',
-            'icone2' => '',
+            'contact1' => 'PHONE',
+            'value-contact1' => '010-020-0340',
+            'icone1' => 'fa fa-phone',
+            'contact2' => 'MOBILE',
+            'value-contact2' => '090-080-0760',
+            'icone2' => 'fa fa-phone',
         ]);
         //
     }

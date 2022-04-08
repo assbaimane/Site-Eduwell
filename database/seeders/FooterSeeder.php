@@ -16,8 +16,8 @@ class FooterSeeder extends Seeder
     public function run()
     {
         DB::table('footers')->insert([
-            'copyright' => '',
-            'designed' => '',
+            'copyright' => 'Copyright © 2022 EduWell Co., Ltd. All Rights Reserved.',
+            'designed' => 'Design: (TemplateMo)',
         ]);
         //
     }
