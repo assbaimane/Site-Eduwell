@@ -16,8 +16,8 @@ class BannerSeeder extends Seeder
     public function run()
     {
         DB::table('banners')->insert([
-            'bouton' => '',
-            'image' => '',
+            'bouton' => 'JOIN US NOW!',
+            'image' => '/images/templatemo-eduwell.png',
         ]);
         //
     }

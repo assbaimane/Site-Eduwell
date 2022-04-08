@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>FOOTER</h1>
-</body>
-</html>
+<div class="col-lg-12">
+    <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+    </ul>
+</div>
+<div class="col-lg-12">
+    <p class="copyright">Copyright © 2022 EduWell Co., Ltd. All Rights Reserved.
+
+        <br>Design: <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+    </p>
+</div>
+</div>
+</div>
+</section>

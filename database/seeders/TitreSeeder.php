@@ -16,10 +16,10 @@ class TitreSeeder extends Seeder
     public function run()
     {
         DB::table('titres')->insert([
-            'titre' => '',
-            'soustitre' => '',
+            'titre' => 'Best Place To Learn Graphic (Design!)',
+            'soustitre' => 'Welcome To Our School',
             'description' => '',
         ]);
-        //
+
     }
 }

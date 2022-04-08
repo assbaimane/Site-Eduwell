@@ -16,8 +16,8 @@ class TestimonialSeeder extends Seeder
     public function run()
     {
         DB::table('testimonials')->insert([
-            'avis' => '',
-            'nom' => '',
+            'avis' => '“just think about TemplateMo if you need free CSS templates for your website”',
+            'nom' => 'Catherine Walk',
             'position' => '',
         ]);
         //

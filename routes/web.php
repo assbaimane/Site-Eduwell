@@ -8,6 +8,7 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\TitreController;
+use App\Models\Titre;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,8 @@ use App\Http\Controllers\TitreController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $titres = Titre::all();
+    return view('welcome', compact("titres"));
 });
 
 Route::get('/dashboard', function () {
