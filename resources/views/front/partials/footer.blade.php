@@ -8,9 +8,17 @@
     </ul>
 </div>
 <div class="col-lg-12">
-    <p class="copyright">Copyright © 2022 EduWell Co., Ltd. All Rights Reserved.
+    <p class="copyright">{{ $footers[0]->copyright }}
 
-        <br>Design: <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+        <br>{!! str_replace(
+    ['(', ')'],
+    [
+        '<a rel="sponsored" href="https://templatemo.com"
+        target="_blank">',
+        '</a>',
+    ],
+    $footers[0]->designed,
+) !!}
     </p>
 </div>
 </div>

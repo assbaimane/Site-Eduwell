@@ -14,19 +14,19 @@
                         <div class="col-lg-4 offset-lg-1">
                             <div class="contact-info">
                                 <div class="icon">
-                                    <i class="fa fa-phone"></i>
+                                    <i class="{{ $contacts[0]->icon1 }}"></i>
                                 </div>
-                                <h4>Phone</h4>
-                                <span>010-020-0340</span>
+                                <h4>{{ $contacts[0]->contact1 }}</h4>
+                                <span>{{ $contacts[0]->value_contact1 }}</span>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="contact-info">
                                 <div class="icon">
-                                    <i class="fa fa-phone"></i>
+                                    <i class="{{ $contacts[0]->icon2 }}"></i>
                                 </div>
-                                <h4>Mobile</h4>
-                                <span>090-080-0760</span>
+                                <h4>{{ $contacts[0]->contact2 }}</h4>
+                                <span>{{ $contacts[0]->value_contact2 }}</span>
                             </div>
                         </div>
                     </div>

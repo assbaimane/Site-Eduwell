@@ -1,14 +1,19 @@
 <?php
 
+use App\Models\Titre;
+use App\Models\Banner;
+use App\Models\Footer;
+use App\Models\Contact;
+use App\Models\Service;
+use App\Models\Testimonial;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\TitreController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\BannerController;
-use App\Http\Controllers\TitreController;
-use App\Models\Titre;
+use App\Http\Controllers\TestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +28,13 @@ use App\Models\Titre;
 
 Route::get('/', function () {
     $titres = Titre::all();
-    return view('welcome', compact("titres"));
+    $banners = Banner::all();
+    $services = Service::all();
+    $testimonials = Testimonial::all();
+    $contacts = Contact::all();
+    $footers = Footer::all();
+    // $navs = Nav::all();
+    return view('welcome', compact('titres', 'banners', 'contacts', 'footers', 'services', 'testimonials'));
 });
 
 Route::get('/dashboard', function () {

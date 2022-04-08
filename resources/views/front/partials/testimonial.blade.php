@@ -3,58 +3,58 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading">
-                    <h6>Testimonials</h6>
-                    <h4>What They <em>Think</em></h4>
+                    <h6>{{ $titres[3]->soustitre }}</h6>
+                    <h4>{!! str_replace(['(', ')'], ['<em>', '</em>'], $titres[3]->titre) !!}</h4>
                 </div>
             </div>
             <div class="col-lg-12">
                 <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
                     <div class="item">
-                        <p>“just think about TemplateMo if you need free CSS templates for your website”</p>
-                        <h4>Catherine Walk</h4>
-                        <span>CEO &amp; Founder</span>
+                        <p>{{ $testimonials[0]->avis }}</p>
+                        <h4>{{ $testimonials[0]->nom }}</h4>
+                        <span>{{ $testimonials[0]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                     <div class="item">
-                        <p>“think about our website first when you need free HTML templates for your website”</p>
-                        <h4>David Martin</h4>
-                        <span>CTO of Tech Company</span>
+                        <p>{{ $testimonials[1]->avis }}</p>
+                        <h4>{{ $testimonials[1]->nom }}</h4>
+                        <span>{{ $testimonials[1]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                     <div class="item">
-                        <p>“just think about our website wherever you need free templates for your website”</p>
-                        <h4>Sophia Whity</h4>
-                        <span>CEO and Co-Founder</span>
+                        <p>{{ $testimonials[2]->avis }}</p>
+                        <h4>{{ $testimonials[2]->nom }}</h4>
+                        <span>{{ $testimonials[2]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                     <div class="item">
-                        <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                        <h4>Helen Shiny</h4>
-                        <span>Tech Officer</span>
+                        <p>{{ $testimonials[3]->avis }}</p>
+                        <h4>{{ $testimonials[3]->nom }}</h4>
+                        <span>{{ $testimonials[3]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                     <div class="item">
-                        <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                        <h4>George Soft</h4>
-                        <span>Gadget Reviewer</span>
+                        <p>{{ $testimonials[4]->avis }}</p>
+                        <h4>{{ $testimonials[4]->nom }}</h4>
+                        <span>{{ $testimonials[4]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                     <div class="item">
-                        <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                        <h4>Andrew Hall</h4>
-                        <span>Marketing Manager</span>
+                        <p>{{ $testimonials[5]->avis }}</p>
+                        <h4>{{ $testimonials[5]->nom }}</h4>
+                        <span>{{ $testimonials[5]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                     <div class="item">
-                        <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                        <h4>Maxi Power</h4>
-                        <span>Fashion Designer</span>
+                        <p>{{ $testimonials[0]->avis }}</p>
+                        <h4>{{ $testimonials[0]->nom }}</h4>
+                        <span>{{ $testimonials[0]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                     <div class="item">
-                        <p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
-                        <h4>Olivia Too</h4>
-                        <span>Creative Designer</span>
+                        <p>{{ $testimonials[1]->avis }}</p>
+                        <h4>{{ $testimonials[1]->nom }}</h4>
+                        <span>{{ $testimonials[1]->position }}</span>
                         <img src={{ asset('/images/quote.png') }} alt="">
                     </div>
                 </div>

@@ -18,10 +18,10 @@ class ContactSeeder extends Seeder
         DB::table('contacts')->insert([
             'map' => '',
             'contact1' => 'PHONE',
-            'value-contact1' => '010-020-0340',
+            'value_contact1' => '010-020-0340',
             'icone1' => 'fa fa-phone',
             'contact2' => 'MOBILE',
-            'value-contact2' => '090-080-0760',
+            'value_contact2' => '090-080-0760',
             'icone2' => 'fa fa-phone',
         ]);
         //

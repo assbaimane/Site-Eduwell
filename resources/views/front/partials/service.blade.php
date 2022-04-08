@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading">
-                    <h6>Our Services</h6>
-                    <h4>Provided <em>Services</em></h4>
+                    <h6>{{ $titres[1]->soustitre }}</h6>
+                    <h4>{!! str_replace(['(', ')'], ['<em>', '</em>'], $titres[1]->titre) !!}</h4>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -12,109 +12,73 @@
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-01.png') }} alt="">
+                                <img src={{ $services[0]->icone }} alt="">
                             </div>
-                            <h4>Useful Tricks</h4>
-                            <p>EduWell is the professional HTML5 template for your school or university websites.</p>
+                            <h4>{{ $services[0]->nom }}</h4>
+                            <p>{{ $services[0]->description }}</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-02.png') }} alt="">
+                                <img src={{ $services[1]->icone }} alt="">
                             </div>
-                            <h4>Creative Ideas</h4>
-                            <p>You can download and use this EduWell Template for your teaching and learning stuffs.</p>
+                            <h4>{{ $services[1]->nom }}</h4>
+                            <p>{{ $services[1]->description }}</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-03.png') }} alt="">
+                                <img src={{ $services[2]->icone }} alt="">
                             </div>
-                            <h4>Ready Target</h4>
-                            <p>Please tell your friends about the best CSS template website that is TemplateMo.</p>
+                            <h4>{{ $services[2]->nom }}</h4>
+                            <p>{{ $services[2]->description }}</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-04.png') }} alt="">
+                                <img src={{ $services[3]->icone }} alt="">
                             </div>
-                            <h4>Technology</h4>
-                            <p>Aenean bibendum consectetur ex eu porttitor. Pellentesque id ultrices metus.</p>
+                            <h4>{{ $services[3]->nom }}</h4>
+                            <p>{{ $services[3]->description }}</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-01.png') }} alt="">
+                                <img src={{ $services[4]->icone }} alt="">
                             </div>
-                            <h4>Useful Tricks</h4>
-                            <p>In non nisi eget magna efficitur ultricies non quis sapien. Pellentesque tellus.</p>
+                            <h4>{{ $services[4]->nom }}</h4>
+                            <p>{{ $services[4]->description }}</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-02.png') }} alt="">
+                                <img src={{ $services[5]->icone }} alt="">
                             </div>
-                            <h4>Creative Ideas</h4>
-                            <p>Aenean bibendum consectetur ex eu porttitor. Pellentesque id ultrices metus.</p>
+                            <h4>{{ $services[5]->nom }}</h4>
+                            <p>{{ $services[5]->description }}</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-03.png') }} alt="">
+                                <img src={{ $services[6]->icone }} alt="">
                             </div>
-                            <h4>Ready Target</h4>
-                            <p>In non nisi eget magna efficitur ultricies non quis sapien. Pellentesque tellus.</p>
+                            <h4>{{ $services[6]->nom }}</h4>
+                            <p>{{ $services[6]->description }}</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="service-item">
                             <div class="icon">
-                                <img src={{ asset('/images/service-icon-04.png') }} alt="">
+                                <img src={{ $services[7]->icone }} alt="">
                             </div>
-                            <h4>Technology</h4>
-                            <p>Aenean bibendum consectetur ex eu porttitor. Pellentesque id ultrices metus.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('/images/service-icon-01.png') }} alt="">
-                            </div>
-                            <h4>Useful Tricks</h4>
-                            <p>In non nisi eget magna efficitur ultricies non quis sapien. Pellentesque tellus.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('/images/service-icon-02.png') }} alt="">
-                            </div>
-                            <h4>Creative Ideas</h4>
-                            <p>Aenean bibendum consectetur ex eu porttitor. Pellentesque id ultrices metus.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('/images/service-icon-03.png') }} alt="">
-                            </div>
-                            <h4>Ready Target</h4>
-                            <p>In non nisi eget magna efficitur ultricies non quis sapien. Pellentesque tellus.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src={{ asset('/images/service-icon-04.png') }} alt="">
-                            </div>
-                            <h4>Technology</h4>
-                            <p>Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.</p>
+                            <h4>{{ $services[7]->nom }}</h4>
+                            <p>{{ $services[7]->description }}</p>
                         </div>
                     </div>
                 </div>
