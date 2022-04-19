@@ -1,4 +1,4 @@
-@extends('back.layouts.app')
+@extends('components.sidebar')
 @section('content')
     <div class='container'>
         <h1 class='my-5'>Roles</h1>
@@ -6,8 +6,8 @@
             <thead>
                 <tr>
                     <th scope='col'>#</th>
+                    <th scope='col'>Nom</th>
                     <th scope='col'>Action</th>
-                    <th scope='col'>nom</th>
                 </tr> {{-- read_tr_anchor --}}
             </thead>
             <tbody>

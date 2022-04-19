@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('map');
             $table->string('contact1');
-            $table->string('value_contact1');
+            $table->string('valuecontact1');
             $table->string('icone1');
             $table->string('contact2');
-            $table->string('value_contact2');
+            $table->string('valuecontact2');
             $table->string('icone2');
             $table->timestamps();
         });

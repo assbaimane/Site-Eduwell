@@ -16,10 +16,12 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
 
+    <body class="font-sans antialiased">
+        @extends('components.sidebar')
+        @section('content')
+        @include('layouts.navigation')
+        <div class="min-h-screen bg-gray-100">
             <!-- Page Heading -->
             <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -32,5 +34,6 @@
                 {{ $slot }}
             </main>
         </div>
+        @endsection
     </body>
 </html>

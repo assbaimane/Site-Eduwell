@@ -1,4 +1,4 @@
-@extends('back.layouts.app')
+@extends('components.sidebar')
 @section('content')
     <div class='container'>
         <h1>Footers</h1>

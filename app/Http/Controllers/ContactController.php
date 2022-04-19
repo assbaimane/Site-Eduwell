@@ -24,18 +24,18 @@ class ContactController extends Controller
         $request->validate([
          'map'=> 'required',
          'contact1'=> 'required',
-         'value-contact1'=> 'required',
+         'valuecontact1'=> 'required',
          'icone1'=> 'required',
          'contact2'=> 'required',
-         'value-contact2'=> 'required',
+         'valuecontact2'=> 'required',
          'icone2'=> 'required',
         ]); // update_validated_anchor;
         $contact->map = $request->map;
         $contact->contact1 = $request->contact1;
-        $contact->value-contact1 = $request->value-contact1;
+        $contact->valuecontact1 = $request->valuecontact1;
         $contact->icone1 = $request->icone1;
         $contact->contact2 = $request->contact2;
-        $contact->value-contact2 = $request->value-contact2;
+        $contact->valuecontact2 = $request->valuecontact2;
         $contact->icone2 = $request->icone2;
         $contact->save(); // update_anchor
         return redirect()->route("contact.index")->with('message', "Successful update !");

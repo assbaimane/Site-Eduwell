@@ -1,4 +1,4 @@
-@extends('back.layouts.app')
+@extends('components.sidebar')
 @section('content')
     <div class='container'>
         <h1>Contacts</h1>
@@ -23,7 +23,7 @@
             </div>
             <div>
                 <label for=''>value-contact1</label>
-                <input type='text' name='value-contact1' value='{{ $contact->value-contact1 }}'>
+                <input type='text' name='value-contact1' value='{{ $contact->valuecontact1 }}'>
             </div>
             <div>
                 <label for=''>icone1</label>
@@ -35,7 +35,7 @@
             </div>
             <div>
                 <label for=''>value-contact2</label>
-                <input type='text' name='value-contact2' value='{{ $contact->value-contact2 }}'>
+                <input type='text' name='value-contact2' value='{{ $contact->valuecontact2 }}'>
             </div>
             <div>
                 <label for=''>icone2</label>

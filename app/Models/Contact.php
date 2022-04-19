@@ -12,10 +12,10 @@ class Contact extends Model
     protected $fillable = [
         'map',
         'contact1',
-        'value-contact1',
+        'valuecontact1',
         'icone1',
         'contact2',
-        'value-contact2',
+        'valuecontact2',
         'icone2',
     ]; // model_anchor
      
