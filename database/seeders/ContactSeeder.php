@@ -19,10 +19,10 @@ class ContactSeeder extends Seeder
             'map' => '',
             'contact1' => 'PHONE',
             'value_contact1' => '010-020-0340',
-            'icone1' => 'fa fa-phone',
+            'icone1' => 'fa-solid fa-phone',
             'contact2' => 'MOBILE',
             'value_contact2' => '090-080-0760',
-            'icone2' => 'fa fa-phone',
+            'icone2' => 'fa-solid fa-phone',
         ]);
         //
     }

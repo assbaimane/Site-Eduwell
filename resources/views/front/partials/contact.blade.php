@@ -14,7 +14,7 @@
                         <div class="col-lg-4 offset-lg-1">
                             <div class="contact-info">
                                 <div class="icon">
-                                    <i class="{{ $contacts[0]->icon1 }}"></i>
+                                    <i class="{{ $contacts[0]->icone1 }}"></i>
                                 </div>
                                 <h4>{{ $contacts[0]->contact1 }}</h4>
                                 <span>{{ $contacts[0]->value_contact1 }}</span>
@@ -23,7 +23,7 @@
                         <div class="col-lg-4">
                             <div class="contact-info">
                                 <div class="icon">
-                                    <i class="{{ $contacts[0]->icon2 }}"></i>
+                                    <i class="{{ $contacts[0]->icone2 }}"></i>
                                 </div>
                                 <h4>{{ $contacts[0]->contact2 }}</h4>
                                 <span>{{ $contacts[0]->value_contact2 }}</span>
