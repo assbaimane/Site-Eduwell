@@ -6,6 +6,21 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+/* Personnalized button color */
+.btn-create{
+  background-color: #a6e9d0;
+}
+.btn-edit{
+  background-color: #e0e9a6;
+}
+.btn-read{
+  background-color: #aea6e9;
+}
+.btn-delete{
+  background-color: #e9a6bf;
+}
+
+/* Sidebar */
 .sidebar{
   position: fixed;
   left: 0;
@@ -24,6 +39,7 @@
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 .sidebar .logo-details .icon{
@@ -209,7 +225,7 @@
 }
 .home-section{
   position: relative;
-  background: #f1e7f2;
+  background: #f3f4f6;
   min-height: 100vh;
   top: 0px;
   left : 78px;

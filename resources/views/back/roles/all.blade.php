@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1 class='my-5'>Roles</h1>
+        <h1 class='py-5'>Roles</h1>
         @if (session()->has('message'))
             <div class='alert alert-success'>
                 {{ session()->get('message') }}
@@ -16,7 +17,7 @@
                 </ul>
             </div>
         @endif
-        <a class='btn btn-success' href='{{ route('role.create') }}' role='button'>Create</a>
+        <a class='btn m-1 btn-create' href='{{ route('role.create') }}' role='button'>Create</a>
         <table class='table'>
             <thead>
                 <tr>
@@ -34,10 +35,10 @@
                             <div class='d-flex'>
                                 <form action='{{ route('role.destroy', $role->id) }}' method='post'>
                                     @csrf
-                                    <button class=btn btn-danger type=submit>Delete</button>
+                                    <button class='btn m-1 btn-delete' type='submit'>Delete</button>
                                 </form>
-                                <a class='btn btn-primary' href='{{ route('role.edit', $role->id) }}' role='button'>Edit</a>
-                                <a class='btn btn-primary' href='{{ route('role.read', $role->id) }}' role='button'>Read</a>
+                                <a class='btn m-1 btn-edit' href='{{ route('role.edit', $role->id) }}' role='button'>Edit</a>
+                                <a class='btn m-1 btn-read' href='{{ route('role.read', $role->id) }}' role='button'>Read</a>
                             </div>
                         </td>
                     </tr>

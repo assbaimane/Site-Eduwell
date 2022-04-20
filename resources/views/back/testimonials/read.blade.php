@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1 class='my-5'>Testimonials</h1>
+        <h1 class='py-5'>Testimonial</h1>
         <table class='table'>
             <thead>
                 <tr>
@@ -19,7 +20,7 @@
                     <td>{{ $testimonial->nom }}</td>
                     <td>{{ $testimonial->position }}</td>
                     <td> {{-- read_td_anchor --}}
-                        <a class='btn btn-primary' href='{{ route('testimonial.index') }}' role='button'>Back</a>
+                        <a class='btn m-1 btn-read' href='{{ route('testimonial.index') }}' role='button'>Back</a>
                     </td>
                 </tr>
             </tbody>

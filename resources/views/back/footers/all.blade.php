@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1 class='my-5'>Footers</h1>
+        <h1 class='py-5'>Footer</h1>
         @if (session()->has('message'))
             <div class='alert alert-success'>
                 {{ session()->get('message') }}
@@ -20,8 +21,8 @@
             <thead>
                 <tr>
                     <th scope='col'>#</th>
-                    <th scope='col'>copyright</th>
-                    <th scope='col'>designed</th>
+                    <th scope='col'>Copyright</th>
+                    <th scope='col'>Designed by</th>
                     <th scope='col'>Action</th>
                 </tr> {{-- all_tr_anchor --}}
             </thead>
@@ -33,7 +34,7 @@
                         <td>{{ $footer->designed }}</td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
-                                <a class='btn btn-primary' href='{{ route('footer.edit', $footer->id) }}' role='button'>Edit</a>
+                                <a class='btn m-1 btn-edit' href='{{ route('footer.edit', $footer->id) }}' role='button'>Edit</a>
                             </div>
                         </td>
                     </tr>

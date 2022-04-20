@@ -1,5 +1,6 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
         <h1>Contacts</h1>
         @if ($errors->any())
@@ -14,34 +15,34 @@
         <form action='{{ route('contact.update' , $contact->id) }}' method='post'>
             @csrf
             <div>
-                <label for=''>map</label>
+                <label for=''>Map</label>
                 <input type='text' name='map' value='{{ $contact->map }}'>
             </div>
             <div>
-                <label for=''>contact1</label>
+                <label for=''>Contact 1</label>
                 <input type='text' name='contact1' value='{{ $contact->contact1 }}'>
             </div>
             <div>
-                <label for=''>value-contact1</label>
-                <input type='text' name='value-contact1' value='{{ $contact->valuecontact1 }}'>
+                <label for=''>Valeur contact 1</label>
+                <input type='text' name='valuecontact1' value='{{ $contact->valuecontact1 }}'>
             </div>
             <div>
-                <label for=''>icone1</label>
+                <label for=''>Icone 1</label>
                 <input type='text' name='icone1' value='{{ $contact->icone1 }}'>
             </div>
             <div>
-                <label for=''>contact2</label>
+                <label for=''>Contact 2</label>
                 <input type='text' name='contact2' value='{{ $contact->contact2 }}'>
             </div>
             <div>
-                <label for=''>value-contact2</label>
-                <input type='text' name='value-contact2' value='{{ $contact->valuecontact2 }}'>
+                <label for=''>Valeur contact 2</label>
+                <input type='text' name='valuecontact2' value='{{ $contact->valuecontact2 }}'>
             </div>
             <div>
-                <label for=''>icone2</label>
+                <label for=''>Icone 2</label>
                 <input type='text' name='icone2' value='{{ $contact->icone2 }}'>
             </div>
-            <button type='submit'>Update</button> {{-- update_blade_anchor --}}
+            <button class='m-1 btn-edit'> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection

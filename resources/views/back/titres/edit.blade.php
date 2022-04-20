@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1>Titres</h1>
+        <h1>Titre</h1>
         @if ($errors->any())
             <div class='alert alert-danger'>
                 <ul>
@@ -25,7 +26,7 @@
                 <label for=''>Description</label>
                 <input type='text' name='description' value='{{ $titre->description }}'>
             </div>
-            <button type='submit'>Update</button> {{-- update_blade_anchor --}}
+            <button class='m-1 btn-edit' type='submit'>Update</button> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection

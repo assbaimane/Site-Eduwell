@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1 class='my-5'>Services</h1>
+        <h1 class='py-5'>Service</h1>
         @if (session()->has('message'))
             <div class='alert alert-success'>
                 {{ session()->get('message') }}
@@ -16,14 +17,14 @@
                 </ul>
             </div>
         @endif
-        <a class='btn btn-success' href='{{ route('service.create') }}' role='button'>Create</a>
+        <a class='btn m-1 btn-create' href='{{ route('service.create') }}' role='button'>Create</a>
         <table class='table'>
             <thead>
                 <tr>
                     <th scope='col'>#</th>
-                    <th scope='col'>icone</th>
-                    <th scope='col'>nom</th>
-                    <th scope='col'>description</th>
+                    <th scope='col'>Icone</th>
+                    <th scope='col'>Nom</th>
+                    <th scope='col'>Description</th>
                     <th scope='col'>Action</th>
                 </tr> {{-- all_tr_anchor --}}
             </thead>
@@ -38,10 +39,10 @@
                             <div class='d-flex'>
                                 <form action='{{ route('service.destroy', $service->id) }}' method='post'>
                                     @csrf
-                                    <button class=btn btn-danger type=submit>Delete</button>
+                                    <button class='btn m-1 btn-delete' type='submit'>Delete</button>
                                 </form>
-                                <a class='btn btn-primary' href='{{ route('service.edit', $service->id) }}' role='button'>Edit</a>
-                                <a class='btn btn-primary' href='{{ route('service.read', $service->id) }}' role='button'>Read</a>
+                                <a class='btn m-1 btn-edit' href='{{ route('service.edit', $service->id) }}' role='button'>Edit</a>
+                                <a class='btn m-1 btn-read' href='{{ route('service.read', $service->id) }}' role='button'>Read</a>
                             </div>
                         </td>
                     </tr>

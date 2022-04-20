@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1 class='my-5'>Testimonials</h1>
+        <h1 class='py-5'>Testimonial</h1>
         @if (session()->has('message'))
             <div class='alert alert-success'>
                 {{ session()->get('message') }}
@@ -16,7 +17,7 @@
                 </ul>
             </div>
         @endif
-        <a class='btn btn-success' href='{{ route('testimonial.create') }}' role='button'>Create</a>
+        <a class='btn m-1 btn-create' href='{{ route('testimonial.create') }}' role='button'>Create</a>
         <table class='table'>
             <thead>
                 <tr>
@@ -38,10 +39,10 @@
                             <div class='d-flex'>
                                 <form action='{{ route('testimonial.destroy', $testimonial->id) }}' method='post'>
                                     @csrf
-                                    <button class=btn btn-danger type=submit>Delete</button>
+                                    <button class='btn m-1 btn-delete' type='submit'>Delete</button>
                                 </form>
-                                <a class='btn btn-primary' href='{{ route('testimonial.edit', $testimonial->id) }}' role='button'>Edit</a>
-                                <a class='btn btn-primary' href='{{ route('testimonial.read', $testimonial->id) }}' role='button'>Read</a>
+                                <a class='btn m-1 btn-edit' href='{{ route('testimonial.edit', $testimonial->id) }}' role='button'>Edit</a>
+                                <a class='btn m-1 btn-read' href='{{ route('testimonial.read', $testimonial->id) }}' role='button'>Read</a>
                             </div>
                         </td>
                     </tr>

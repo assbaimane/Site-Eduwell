@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1>Testimonials</h1>
+        <h1>Testimonial</h1>
         @if ($errors->any())
             <div class='alert alert-danger'>
                 <ul>
@@ -14,18 +15,18 @@
         <form action='{{ route('testimonial.store') }}' method='post'>
             @csrf
             <div>
-                <label for=''>avis</label>
+                <label for=''>Avis</label>
                 <input type='text' name='avis'>
             </div>
             <div>
-                <label for=''>nom</label>
+                <label for=''>Nom</label>
                 <input type='text' name='nom'>
             </div>
             <div>
-                <label for=''>position</label>
+                <label for=''>Position</label>
                 <input type='text' name='position'>
             </div>
-            <button type='submit'>Create</button> {{-- create_blade_anchor --}} 
+            <button class='m-1 btn-create' type='submit'>Create</button> {{-- create_blade_anchor --}} 
         </form>
     </div>
 @endsection

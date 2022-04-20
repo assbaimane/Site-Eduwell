@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1>Roles</h1>
+        <h1>Role</h1>
         @if ($errors->any())
             <div class='alert alert-danger'>
                 <ul>
@@ -14,10 +15,10 @@
         <form action='{{ route('role.update' , $role->id) }}' method='post'>
             @csrf
             <div>
-                <label for=''>nom</label>
+                <label for=''>Nom</label>
                 <input type='text' name='nom' value='{{ $role->nom }}'>
             </div>
-            <button type='submit'>Update</button> {{-- update_blade_anchor --}}
+            <button class="m-1 btn-edit" type='submit'>Update</button> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection

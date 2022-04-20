@@ -1,7 +1,8 @@
 @extends('components.sidebar')
 @section('content')
+<link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1>Footers</h1>
+        <h1>Footer</h1>
         @if ($errors->any())
             <div class='alert alert-danger'>
                 <ul>
@@ -14,11 +15,11 @@
         <form action='{{ route('footer.update' , $footer->id) }}' method='post'>
             @csrf
             <div>
-                <label for=''>copyright</label>
+                <label for=''>Copyright</label>
                 <input type='text' name='copyright' value='{{ $footer->copyright }}'>
             </div>
             <div>
-                <label for=''>designed</label>
+                <label for=''>Designed by</label>
                 <input type='text' name='designed' value='{{ $footer->designed }}'>
             </div>
             <button type='submit'>Update</button> {{-- update_blade_anchor --}}

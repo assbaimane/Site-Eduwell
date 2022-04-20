@@ -5,55 +5,54 @@
 <div>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='icon de code'></i>
         <div class="logo_name">EduWell</div>
-        <i class='text-light  fa-bars' id="btn" ></i>
-      </div>
+        <i class='text-light fa-solid fa-school' id="btn" ></i>
+    </div>
 
     <ul class="nav-list">
       <li>
-        <a href="back/roles">
-          <i class='fa-solid fa-medal'></i>
+        <a href={{ route('role.index') }}>
+          {{-- <i class='fa-solid fa-medal'></i> --}}
           <span class="links_name">Role</span>
         </a>
          <span class="tooltip">Role</span>
       </li>
       
       <li>
-       <a href="back/titres">
-         <i class='fa-solid fa-computer-mouse' ></i>
+       <a href={{ route('titre.index') }}>
+         {{-- <i class='fa-solid fa-computer-mouse' ></i> --}}
          <span class="links_name">Titre</span>
        </a>
        <span class="tooltip">Titre</span>
      </li>
 
      <li>
-       <a href="back/banners">
-         <i class='fa-solid fa-house' ></i>
+       <a href={{ route('banner.index') }}>
+         {{-- <i class='fa-solid fa-house' ></i> --}}
          <span class="links_name">Banner</span>
        </a>
        <span class="tooltip">Banner</span>
      </li>
 
      <li>
-       <a href="back/services">
-         <i class='fa-solid fa-list-check' ></i>
+       <a href={{ route('service.index') }}>
+         {{-- <i class='fa-solid fa-list-check' ></i> --}}
          <span class="links_name">Service</span>
        </a>
        <span class="tooltip">Service</span>
      </li>
 
      <li>
-       <a href="back/testimonials">
-         <i class='fa-solid fa-hand-wave' ></i>
+       <a href={{ route('testimonial.index') }}>
+         {{-- <i class='fa-solid fa-hand-wave' ></i> --}}
          <span class="links_name">Testimonial</span>
        </a>
        <span class="tooltip">Testimonial</span>
      </li>
 
      <li>
-       <a href="back/contacts">
-         <i class='fa-solid fa-bell-concierge' ></i>
+       <a href={{ route('contact.index') }}>
+         {{-- <i class='fa-solid fa-bell-concierge' ></i> --}}
          <span class="links_name">Contact</span>
        </a>
        <span class="tooltip">Contact</span>
