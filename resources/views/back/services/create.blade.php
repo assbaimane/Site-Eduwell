@@ -15,8 +15,13 @@
         <form action='{{ route('service.store') }}' method='post'>
             @csrf
             <div>
-                <label for=''>Icone</label>
-                <input type='text' name='icone'>
+                <label for='icons'>Icone</label>
+                <select name="icons" id="icons">
+                    <option value="{{ asset('images/service-icon-01.png') }}">Icone 1</option>
+                    <option value="{{ asset('images/service-icon-02.png') }}">Icone 2</option>
+                    <option value="{{ asset('images/service-icon-03.png') }}">Icone 3</option>
+                    <option value="{{ asset('images/service-icon-04.png') }}">Icone 4</option>
+                </select>
             </div>
             <div>
                 <label for=''>Nom</label>
