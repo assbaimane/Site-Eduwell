@@ -22,7 +22,7 @@
                 <label for=''>Designed by</label>
                 <input type='text' name='designed' value='{{ $footer->designed }}'>
             </div>
-            <button type='submit'>Update</button> {{-- update_blade_anchor --}}
+            <button class='btn btn-edit' type='submit'>Update</button> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection

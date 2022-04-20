@@ -26,7 +26,7 @@
                 <label for=''>Position</label>
                 <input type='text' name='position'>
             </div>
-            <button class='m-1 btn-create' type='submit'>Create</button> {{-- create_blade_anchor --}} 
+            <button class='m-1 btn btn-create' type='submit'>Create</button> {{-- create_blade_anchor --}} 
         </form>
     </div>
 @endsection

@@ -18,7 +18,7 @@
                 <label for=''>Nom</label>
                 <input type='text' name='nom' value='{{ $role->nom }}'>
             </div>
-            <button class="m-1 btn-edit" type='submit'>Update</button> {{-- update_blade_anchor --}}
+            <button class="m-1 btn btn-edit" type='submit'>Update</button> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection

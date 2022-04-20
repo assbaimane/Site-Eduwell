@@ -44,7 +44,7 @@
                         <td>{{ $contact->icone2 }}</td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
-                                <a class='btn m-1 btn-edit' href='{{ route('contact.edit', $contact->id) }}' role='button'>Edit</a>
+                                <a class='btn btn-edit' href='{{ route('contact.edit', $contact->id) }}' role='button'>Edit</a>
                             </div>
                         </td>
                     </tr>

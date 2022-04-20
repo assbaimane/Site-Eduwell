@@ -26,7 +26,7 @@
                 <label for=''>Position</label>
                 <input type='text' name='position' value='{{ $testimonial->position }}'>
             </div>
-            <button class='m-1 btn-edit' type='submit'>Update</button> {{-- update_blade_anchor --}}
+            <button class='m-1 btn btn-edit' type='submit'>Update</button> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection

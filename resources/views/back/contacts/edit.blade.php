@@ -2,7 +2,7 @@
 @section('content')
 <link rel="stylesheet" href={{ asset("css/sidebar.css") }}>
     <div class='container'>
-        <h1>Contacts</h1>
+        <h1>Contact</h1>
         @if ($errors->any())
             <div class='alert alert-danger'>
                 <ul>
@@ -42,7 +42,7 @@
                 <label for=''>Icone 2</label>
                 <input type='text' name='icone2' value='{{ $contact->icone2 }}'>
             </div>
-            <button class='m-1 btn-edit'> {{-- update_blade_anchor --}}
+            <button class='m-1 btn btn-edit'>Update</button> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection
