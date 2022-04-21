@@ -31,7 +31,7 @@
                     <tr>
                         <th scope='row'>{{ $banner->id }}</th>
                         <td>{{ $banner->bouton }}</td>
-                        <td>{{ $banner->image }}</td>
+                        <td><img height="60px" src={{ $banner->image }}></image></td>
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
                                 <a class='btn m-1 btn-edit' href='{{ route('banner.edit', $banner->id) }}' role='button'>Edit</a>
