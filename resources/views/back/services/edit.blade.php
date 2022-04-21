@@ -12,6 +12,15 @@
                 </ul>
             </div>
         @endif
+        <div class="pt-4 pb-4">
+            <h2>Les icônes disponibles</h2>
+            <div class="row justify-content-center align-items-center mx-auto my-auto">
+                <div class="col-3">Icône 1 <img src="{{ asset('images/service-icon-01.png') }}"/></div>
+                <div class="col-3">Icône 2 <img src="{{ asset('images/service-icon-02.png') }}"/></div>
+                <div class="col-3">Icône 3 <img src="{{ asset('images/service-icon-03.png') }}"/></div>
+                <div class="col-3">Icône 4 <img src="{{ asset('images/service-icon-04.png') }}"/></div>
+            </div>
+        </div>
         <form action='{{ route('service.update' , $service->id) }}' method='post'>
             @csrf
             <div>
