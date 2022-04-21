@@ -27,6 +27,7 @@ class BannerController extends Controller
         ]); // update_validated_anchor;
         $banner->bouton = $request->bouton;
         $banner->image = $request->image;
+        $request -> file('image')->storePublicly('img','public');
         $banner->save(); // update_anchor
         return redirect()->route("banner.index")->with('message', "Successful update !");
     }
