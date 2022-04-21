@@ -16,7 +16,7 @@ class ContactSeeder extends Seeder
     public function run()
     {
         DB::table('contacts')->insert([
-            'map' => '',
+            'map' => 'place de la minoterie 10',
             'contact1' => 'PHONE',
             'valuecontact1' => '010-020-0340',
             'icone1' => 'fa-solid fa-phone',

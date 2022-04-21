@@ -5,11 +5,18 @@
                 <div id="map">
 
                     <!-- You just need to go to Google Maps for your own map point, and copy the embed code from Share -> Embed a map section -->
-                    <iframe
+                    {{-- <iframe
                         src="https://www.google.com/maps/embed/v1/search
                         ?key=YOUR_API_KEY
                         &q=
                         {!! str_replace([' '],['+'], $contacts[0]->map) !!}"
+                        width="100%" height="420px" frameborder="0"
+                        style="border:0; border-radius: 15px; position: relative; z-index: 2;"
+                        allowfullscreen=""></iframe> --}}
+
+                        {{-- <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=rue%20marie%20christine%2050&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div> --}}
+                    <iframe
+                        src="https://maps.google.com/maps?q={!! str_replace([' '],['%20'], $contacts[0]->map) !!}&t=&z=13&ie=UTF8&iwloc=&output=embed"
                         width="100%" height="420px" frameborder="0"
                         style="border:0; border-radius: 15px; position: relative; z-index: 2;"
                         allowfullscreen=""></iframe>
