@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Footer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FooterController extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware(['auth','role']);
+    }
+
     public function index()
     {
         $footers = Footer::all();

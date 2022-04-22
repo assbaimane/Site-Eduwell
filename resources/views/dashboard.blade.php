@@ -9,6 +9,13 @@
             </h2>
         </x-slot>
 
+        <div class="pt-5 mx-auto" style="width: 95%">
+            @if (session()->has('message'))
+                <div class='alert alert-danger'>
+                    {{ session()->get('message') }}
+                </div>
+            @endif
+        </div>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

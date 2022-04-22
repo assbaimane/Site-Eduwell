@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BannerController extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware(['auth','role']);
+    }
+
     public function index()
     {
         $banners = Banner::all();

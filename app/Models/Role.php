@@ -14,4 +14,9 @@ class Role extends Model
     ]; // model_anchor
      
     protected $table = 'roles';
+
+    public function joueurs()
+    {
+        return $this->hasMany(Joueur::class);
+    }
 }

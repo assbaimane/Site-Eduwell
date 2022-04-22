@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Titre;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TitreController extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware(['auth','role']);
+    }
+
     public function index()
     {
         $titres = Titre::all();

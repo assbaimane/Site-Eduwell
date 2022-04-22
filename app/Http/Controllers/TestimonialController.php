@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TestimonialController extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware(['auth','role']);
+    }
+
     public function index()
     {
         $testimonials = Testimonial::all();

@@ -1,3 +1,4 @@
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -17,6 +18,21 @@
                 <x-label for="name" :value="__('Name')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            </div>
+
+            <!-- Role -->
+            <div class="mt-4">
+                <x-label for="role" :value="__('Role')" />
+
+                {{-- <x-input id="role" class="block mt-1 w-full" type="text" name="role" :value="old('role_id')" required autofocus /> --}}
+                {{-- <select id="role" name="role_id" class="block mt-1 w-full" :options="$roles" :value="old('role_id')" required autofocus /> --}}
+                <select name="role_id" class="block mt-1 w-full border border-light rounded">
+                    <option value="">Select role</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Modérateur</option>
+                    <option value="3">Professeur</option>
+                    <option value="4">Etudiant</option>
+                </select>
             </div>
 
             <!-- Email Address -->
