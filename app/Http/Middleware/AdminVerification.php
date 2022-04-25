@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class RoleVerification
+class AdminVerification
 {
     /**
      * Handle an incoming request.
@@ -20,7 +20,7 @@ class RoleVerification
             return $next($request);
         }
         else{
-            $accessdenied = "Vous n'avez pas les droits pour accéder à cette page";
+            $accessdenied = "Vous n'avez pas les droits pour accéder à cette page. En tant que WebMaster, seules les pages Testimonial et Contact vous sont autorisées. En tant que Membre, vous êtes juste autorisé à accéder à la page d'accueil.";
             return redirect()->route("dashboard")->with('message', $accessdenied);
         }
     }

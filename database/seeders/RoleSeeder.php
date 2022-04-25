@@ -22,10 +22,10 @@ class RoleSeeder extends Seeder
             'nom' => 'Moderateur',
         ]);
         DB::table('roles')->insert([
-            'nom' => 'Professeur',
+            'nom' => 'WebMaster',
         ]);
         DB::table('roles')->insert([
-            'nom' => 'Etudiant',
+            'nom' => 'Membre',
         ]);
     }
 }
