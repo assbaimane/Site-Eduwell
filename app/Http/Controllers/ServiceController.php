@@ -16,8 +16,9 @@ class ServiceController extends Controller
 
     public function index()
     {
+        $user = Auth::user();
         $services = Service::all();
-        return view("/back/services/all",compact("services"));
+        return view("/back/services/all",compact("services",'user'));
     }
     public function create()
     {

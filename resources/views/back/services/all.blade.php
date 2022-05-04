@@ -17,7 +17,7 @@
                 </ul>
             </div>
         @endif
-        @if (User::Class->role_id === 1 || User::Class->role_id === 3)
+        @if ($user->role_id === 1 || $user->role_id === 3)
             <a class='btn m-1 btn-create' href='{{ route('service.create') }}' role='button'>Create</a>
         @endif
         <table class='table'>
@@ -41,9 +41,13 @@
                             <div class='d-flex'>
                                 <form action='{{ route('service.destroy', $service->id) }}' method='post'>
                                     @csrf
-                                    <button class='btn m-1 btn-delete' type='submit'>Delete</button>
+                                    @if ($user->role_id === 1)
+                                        <button class='btn m-1 btn-delete' type='submit'>Delete</button>
+                                    @endif
                                 </form>
-                                <a class='btn m-1 btn-edit' href='{{ route('service.edit', $service->id) }}' role='button'>Edit</a>
+                                @if ($user->role_id === 1)
+                                    <a class='btn m-1 btn-edit' href='{{ route('service.edit', $service->id) }}' role='button'>Edit</a>
+                                @endif
                                 <a class='btn m-1 btn-read' href='{{ route('service.read', $service->id) }}' role='button'>Read</a>
                             </div>
                         </td>
