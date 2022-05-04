@@ -15,8 +15,9 @@ class TestimonialController extends Controller
 
     public function index()
     {
+        $user = Auth::user();
         $testimonials = Testimonial::all();
-        return view("/back/testimonials/all",compact("testimonials"));
+        return view("/back/testimonials/all",compact("testimonials","user"));
     }
     public function create()
     {
