@@ -20,6 +20,7 @@ class TestimonialController extends Controller
     }
     public function create()
     {
+        $this ->authorize('create');
         return view("/back/testimonials/create");
     }
     public function store(Request $request)
@@ -48,6 +49,7 @@ class TestimonialController extends Controller
     }
     public function update($id, Request $request)
     {
+        $this ->authorize('update');
         $testimonial = Testimonial::find($id);
         $request->validate([
          'avis'=> 'required',
@@ -62,6 +64,7 @@ class TestimonialController extends Controller
     }
     public function destroy($id)
     {
+        $this ->authorize('delete');
         $testimonial = Testimonial::find($id);
         $testimonial->delete();
         return redirect()->back()->with('message', "Successful delete !");

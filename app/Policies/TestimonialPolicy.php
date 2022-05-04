@@ -41,7 +41,7 @@ class TestimonialPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->role_id != null;
     }
 
     /**
@@ -53,7 +53,7 @@ class TestimonialPolicy
      */
     public function update(User $user, Testimonial $testimonial)
     {
-        //
+        return $user->role_id === 1 || $user->role_id === 3;
     }
 
     /**
@@ -65,7 +65,7 @@ class TestimonialPolicy
      */
     public function delete(User $user, Testimonial $testimonial)
     {
-        //
+        return $user->role_id === 1;
     }
 
     /**

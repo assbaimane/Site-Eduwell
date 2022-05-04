@@ -39,9 +39,13 @@
                             <div class='d-flex'>
                                 <form action='{{ route('testimonial.destroy', $testimonial->id) }}' method='post'>
                                     @csrf
-                                    <button class='btn m-1 btn-delete' type='submit'>Delete</button>
+                                    @if ($user->role_id === 1)
+                                        <button class='btn m-1 btn-delete' type='submit'>Delete</button>
+                                    @endif
                                 </form>
-                                <a class='btn m-1 btn-edit' href='{{ route('testimonial.edit', $testimonial->id) }}' role='button'>Edit</a>
+                                @if ($user->role_id === 1 || $user->role_id === 3)
+                                    <a class='btn m-1 btn-edit' href='{{ route('testimonial.edit', $testimonial->id) }}' role='button'>Edit</a>
+                                @endif
                                 <a class='btn m-1 btn-read' href='{{ route('testimonial.read', $testimonial->id) }}' role='button'>Read</a>
                             </div>
                         </td>
