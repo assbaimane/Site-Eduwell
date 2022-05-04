@@ -28,8 +28,8 @@
                 <input type='text' name='nom'>
             </div>
             <div>
-                <label for='icons'>Icone</label>
-                <select name="icons" id="icons">
+                <label for='icone'>Icone</label>
+                <select name="icone" id="icone">
                     <option value="{{ asset('images/service-icon-01.png') }}">Icone 1</option>
                     <option value="{{ asset('images/service-icon-02.png') }}">Icone 2</option>
                     <option value="{{ asset('images/service-icon-03.png') }}">Icone 3</option>

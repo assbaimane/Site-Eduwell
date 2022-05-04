@@ -10,7 +10,7 @@ class ServiceController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth','role']);
+        $this->middleware(['auth']);
     }
 
 
@@ -25,6 +25,7 @@ class ServiceController extends Controller
     }
     public function store(Request $request)
     {
+        $this ->authorize('create');
         $service = new Service;
         $request->validate([
          'icone'=> 'required',
@@ -49,6 +50,7 @@ class ServiceController extends Controller
     }
     public function update($id, Request $request)
     {
+        $this ->authorize('update');
         $service = Service::find($id);
         $request->validate([
          'icone'=> 'required',
@@ -63,6 +65,7 @@ class ServiceController extends Controller
     }
     public function destroy($id)
     {
+        $this->authorize('delete');
         $service = Service::find($id);
         $service->delete();
         return redirect()->back()->with('message', "Successful delete !");

@@ -17,7 +17,9 @@
                 </ul>
             </div>
         @endif
-        <a class='btn m-1 btn-create' href='{{ route('service.create') }}' role='button'>Create</a>
+        @if (User::Class->role_id === 1 || User::Class->role_id === 3)
+            <a class='btn m-1 btn-create' href='{{ route('service.create') }}' role='button'>Create</a>
+        @endif
         <table class='table'>
             <thead>
                 <tr>

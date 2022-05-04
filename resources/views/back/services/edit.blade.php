@@ -25,7 +25,7 @@
             @csrf
             <div>
                 <label for=''>Icone</label>
-                <select name="icons" id="icons">
+                <select name="icone" id="icone">
                     <option value='{{ $service->icone }}'>-</option>
                     <option value="{{ asset('images/service-icon-01.png') }}">Icone 1</option>
                     <option value="{{ asset('images/service-icon-02.png') }}">Icone 2</option>
