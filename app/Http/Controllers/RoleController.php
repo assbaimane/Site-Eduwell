@@ -20,6 +20,7 @@ class RoleController extends Controller
     }
     public function create()
     {
+        $this ->authorize('create');
         return view("/back/roles/create");
     }
     public function store(Request $request)

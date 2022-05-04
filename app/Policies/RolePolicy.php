@@ -41,7 +41,7 @@ class RolePolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->role_id === 1;
     }
 
     /**
